@@ -17,13 +17,13 @@ namespace _01_LateEvaluation
 
             #region Foreach actually
 
-            //var numbers = Enumerable.Range(0, 10).GetEnumerator();
+            //var enumerator = Enumerable.Range(0, 10).GetEnumerator();
             //try
             //{
             //    int current;
-            //    while (numbers.MoveNext())
+            //    while (enumerator.MoveNext())
             //    {
-            //        current = numbers.Current;
+            //        current = enumerator.Current;
             //        functions.Add(() => current);
             //    }
             //}
@@ -31,13 +31,13 @@ namespace _01_LateEvaluation
             //{
             //    //Do nothing
             //}
-            
+
             #endregion
 
             Console.WriteLine(
                 functions
-                    .Select(x => x().ToString())
-                    .Aggregate((a, n) => a += "," + n));
+                    .Select(function => function().ToString())
+                    .Aggregate((aggregate, number) => aggregate + "," + number));
 
             Console.ReadLine();
         }

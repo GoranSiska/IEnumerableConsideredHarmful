@@ -5,38 +5,83 @@ namespace _05_OrderOfEvaluation
 {
     public class BusinessOperations
     {
-        public void Main()
-        {
-            OuterMethod().ToList();
-        }
+        #region Materialized
 
-        public IEnumerable<int> OuterMethod()
+        public void MainMaterialized()
         {
-            using (var context = new Context(Helpers.GetCaller()))
+            foreach (var number in OuterMethod_1())
             {
-                return InnerMethod3();
+                //do business logic
             }
         }
 
-        public List<int> InnerMethod()
+        protected IEnumerable<int> OuterMethod_1()
         {
-            using (var context = new Context(Helpers.GetCaller()))
+            using (var context = new Context())
+            {
+                return InnerMethod_1();
+            }
+        }
+
+        protected List<int> InnerMethod_1()
+        {
+            using (var context = new Context())
             {
                 return Enumerable.Range(0, 10).ToList();
             }
         }
 
-        public IEnumerable<int> InnerMethod2()
+        #endregion
+
+        #region WithEnumerable
+
+        public void MainWithEnumerable()
         {
-            using (var context = new Context(Helpers.GetCaller()))
+            foreach (var number in OuterMethod_2())
+            {
+                //do business logic
+            }
+        }
+
+        protected IEnumerable<int> OuterMethod_2()
+        {
+            using (var context = new Context())
+            {
+                return InnerMethod_2();
+            }
+        }
+
+        public IEnumerable<int> InnerMethod_2()
+        {
+            using (var context = new Context())
             {
                 return Enumerable.Range(0, 10);
             }
         }
 
-        public IEnumerable<int> InnerMethod3()
+        #endregion
+
+        #region WithYield
+
+        public void MainWithYield()
         {
-            using (var context = new Context(Helpers.GetCaller()))
+            foreach (var number in OuterMethod_3())
+            {
+                //do business logic
+            }
+        }
+
+        protected IEnumerable<int> OuterMethod_3()
+        {
+            using (var context = new Context())
+            {
+                return InnerMethod_3();
+            }
+        }
+
+        public IEnumerable<int> InnerMethod_3()
+        {
+            using (var context = new Context())
             {
                 foreach (var number in Enumerable.Range(0, 10))
                 {
@@ -44,5 +89,7 @@ namespace _05_OrderOfEvaluation
                 }
             }
         }
+
+        #endregion
     }
 }
