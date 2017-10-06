@@ -9,15 +9,24 @@ namespace _05_OrderOfEvaluation
         private readonly string _methodName;
         public Context([CallerMemberName] string methodName = null)
         {
-            _methodName = methodName;
+            _methodName = methodName.Substring(0, methodName.Length - 2);
             Debug.WriteLine("<" + _methodName + ">");
             Debug.Indent();
         }
 
         public void Dispose()
         {
-            Debug.Unindent();
-            Debug.WriteLine("</" + _methodName + ">");
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                Debug.Unindent();
+                Debug.WriteLine("</" + _methodName + ">");
+            }
         }
     }
 }

@@ -3,27 +3,27 @@ using System.Linq;
 
 namespace _05_OrderOfEvaluation
 {
-    public class BusinessOperations
+    public class NumbersService
     {
         #region Materialized
 
-        public void MainMaterialized()
+        public void GetNumbers_Materialized()
         {
-            foreach (var number in OuterMethod_1())
+            foreach (var number in GetNumbers_Outer_1())
             {
                 //do business logic
             }
         }
 
-        protected IEnumerable<int> OuterMethod_1()
+        protected IEnumerable<int> GetNumbers_Outer_1()
         {
             using (var context = new Context())
             {
-                return InnerMethod_1();
+                return GetNumbers_Inner_1();
             }
         }
 
-        protected List<int> InnerMethod_1()
+        protected List<int> GetNumbers_Inner_1()
         {
             using (var context = new Context())
             {
@@ -35,23 +35,23 @@ namespace _05_OrderOfEvaluation
 
         #region WithEnumerable
 
-        public void MainWithEnumerable()
+        public void GetNumbers_WithEnumerable()
         {
-            foreach (var number in OuterMethod_2())
+            foreach (var number in GetNumbers_Outer_2())
             {
                 //do business logic
             }
         }
 
-        protected IEnumerable<int> OuterMethod_2()
+        protected IEnumerable<int> GetNumbers_Outer_2()
         {
             using (var context = new Context())
             {
-                return InnerMethod_2();
+                return GetNumbers_Inner_2();
             }
         }
 
-        public IEnumerable<int> InnerMethod_2()
+        public IEnumerable<int> GetNumbers_Inner_2()
         {
             using (var context = new Context())
             {
@@ -63,23 +63,23 @@ namespace _05_OrderOfEvaluation
 
         #region WithYield
 
-        public void MainWithYield()
+        public void GetNumbers_WithYield()
         {
-            foreach (var number in OuterMethod_3())
+            foreach (var number in GetNumbers_Outer_3())
             {
                 //do business logic
             }
         }
 
-        protected IEnumerable<int> OuterMethod_3()
+        protected IEnumerable<int> GetNumbers_Outer_3()
         {
             using (var context = new Context())
             {
-                return InnerMethod_3();
+                return GetNumbers_Inner_3();
             }
         }
 
-        public IEnumerable<int> InnerMethod_3()
+        public IEnumerable<int> GetNumbers_Inner_3()
         {
             using (var context = new Context())
             {
