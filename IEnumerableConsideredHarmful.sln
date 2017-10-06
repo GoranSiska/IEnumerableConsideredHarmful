@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_OrderOfEvaluation", "05_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_MultipleEvaluation", "02_MultipleEvaluation\02_MultipleEvaluation.csproj", "{E48E5463-7A69-4D84-BD04-F0788B0C18B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_InstanceEvaluation", "03_InstanceEvaluation\03_InstanceEvaluation.csproj", "{1C657F86-7F5E-44B5-834C-3238100C674B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E48E5463-7A69-4D84-BD04-F0788B0C18B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E48E5463-7A69-4D84-BD04-F0788B0C18B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E48E5463-7A69-4D84-BD04-F0788B0C18B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C657F86-7F5E-44B5-834C-3238100C674B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C657F86-7F5E-44B5-834C-3238100C674B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C657F86-7F5E-44B5-834C-3238100C674B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C657F86-7F5E-44B5-834C-3238100C674B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
