@@ -46,8 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GivenRandomGameAction.cs.cs" />
-    <Compile Include="RandomGameAction.cs" />
+    <Compile Include="FibonacciSequence.cs" />
+    <Compile Include="FibonacciSequenceEnumerator.cs" />
+    <Compile Include="GivenFibonacciSequence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
