@@ -10,9 +10,7 @@ namespace _03_InstanceEvaluation
     {
         public bool HaveErrors(IEnumerable<PersonDto> personDtos)
         {
-            var persons = From(personDtos)
-               //.ToList()
-               ;
+            var persons = From(personDtos);
 
             Validate(persons);
 
