@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace _05_OrderOfEvaluation
@@ -87,6 +88,34 @@ namespace _05_OrderOfEvaluation
                 {
                     yield return number;
                 }
+            }
+        }
+
+        #endregion
+
+        #region WithAction
+
+        public void GetNumbers_WithAction(Action<int> businessLogic)
+        {
+            foreach (var number in GetNumbers_Outer_4())
+            {
+                businessLogic(number);
+            }
+        }
+
+        protected IEnumerable<int> GetNumbers_Outer_4()
+        {
+            using (var context = new Context())
+            {
+                return GetNumbers_Inner_4();
+            }
+        }
+
+        public IEnumerable<int> GetNumbers_Inner_4()
+        {
+            using (var context = new Context())
+            {
+                return Enumerable.Range(0, 10);
             }
         }
 

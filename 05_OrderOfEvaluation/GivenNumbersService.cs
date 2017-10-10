@@ -86,5 +86,19 @@ namespace _05_OrderOfEvaluation
 
             AssertProperNesting();
         }
+
+        [Test]
+        public void WhenOperation_WithAction_InnerMethodIsProperlyNested()
+        {
+            var businessOperations = new NumbersService();
+            var businessLogic = new Action<int>(n => 
+            {
+                //do business logic 
+            });
+
+            businessOperations.GetNumbers_WithAction(businessLogic);
+
+            AssertProperNesting();
+        }
     }
 }
