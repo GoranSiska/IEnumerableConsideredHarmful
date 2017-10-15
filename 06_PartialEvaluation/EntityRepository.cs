@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace _06_PartialEvaluation
 {
-    public class EntitiyRepository
+    public class EntityRepository
     {
         public IEnumerable<int> ConvertAndStore(IEnumerable<int> items)
         {

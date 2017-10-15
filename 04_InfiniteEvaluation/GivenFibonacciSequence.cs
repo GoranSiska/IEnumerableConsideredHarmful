@@ -33,7 +33,7 @@ namespace _04_InfiniteEvaluation
         {
             var fibonacciSequence = new FibonacciSequence();
 
-            var result = fibonacciSequence.Count();
+            var result = fibonacciSequence.FirstOrDefault(n=>n==6);
 
             Assert.Greater(result, 100);
         }

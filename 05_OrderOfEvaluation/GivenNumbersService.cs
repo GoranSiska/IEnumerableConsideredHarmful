@@ -78,7 +78,7 @@ namespace _05_OrderOfEvaluation
         }
 
         [Test]
-        public void WhenOperation_Withyield_InnerMethodIsProperlyNested()
+        public void WhenOperation_WithYield_InnerMethodIsProperlyNested()
         {
             var businessOperations = new NumbersService();
 

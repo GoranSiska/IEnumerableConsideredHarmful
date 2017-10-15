@@ -1,9 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _03_InstanceEvaluation
 {
@@ -11,9 +6,8 @@ namespace _03_InstanceEvaluation
     public class GivenPersonValidationService
     {
         [Test]
-        public void Test101()
+        public void WhenValidatingPersonsWithErrors_HasErrorsReturnsTrue()
         {
-            //Shlemiel The Painter
             PersonDto[] personDtos = new[]
             {
                new PersonDto { Name = "Goran" },

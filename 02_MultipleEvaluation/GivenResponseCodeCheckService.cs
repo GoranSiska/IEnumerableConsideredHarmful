@@ -7,7 +7,7 @@ namespace _02_MultipleEvaluation
     [TestFixture]
     public class GivenResponseCodeCheckService
     {
-        [Test, Timeout(1000)] //, Timeout(1000)
+        [Test, Timeout(1000)]
         public void WhenCheckErrorsInResponseCodes_WithErrorCode_ReturnsFalse()
         {
             var responseCodes = new List<int> { 200, 200, 404 };

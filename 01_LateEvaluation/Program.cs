@@ -6,7 +6,9 @@ namespace _01_LateEvaluation
 {
     class Program
     {
+#pragma warning disable CRR0026 // Unused member
         static void Main(string[] args)
+#pragma warning restore CRR0026 // Unused member
         {
             var functions = new List<Func<int>>();
 

@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntitiyRepository.cs" />
-    <Compile Include="GivenEntitiyRepository.cs" />
+    <Compile Include="EntityRepository.cs" />
+    <Compile Include="GivenEntityRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

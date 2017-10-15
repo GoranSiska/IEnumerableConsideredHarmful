@@ -4,16 +4,16 @@ using System.Linq;
 namespace _06_PartialEvaluation
 {
     [TestFixture]
-    public class GivenEntitiyRepository
+    public class GivenEntityRepository
     {
         [Test]
         public void WhenConvertAndStore_DataIsStored()
         {
-            var repository = new EntitiyRepository();
+            var repository = new EntityRepository();
             Assert.IsFalse(repository.AreItemsStored, "AreItemsStored should be false when no items are stored!");
             var items = Enumerable.Range(0, 10);
 
-            repository.ConvertAndStore(items).ToList();
+            var storedItems = repository.ConvertAndStore(items).ToList();
             //repository.ConvertAndStore(items).Take(1).ToList();
             //repository.ConvertAndStore(items).Where(i=>i==1).ToList();
             //repository.ConvertAndStore(items).Any(i => i == 1);
