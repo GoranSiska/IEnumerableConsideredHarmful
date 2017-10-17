@@ -29,13 +29,13 @@ namespace _04_InfiniteEvaluation
         }
 
         [Test, Timeout(2000)]
-        public void WhenCountingValues_ReturnsInfinite()
+        public void WhenSeekingNonFibonacciValue_ReturnsDefaultValue()
         {
             var fibonacciSequence = new FibonacciSequence();
 
             var result = fibonacciSequence.FirstOrDefault(n=>n==6);
 
-            Assert.Greater(result, 100);
+            Assert.AreEqual(default(long), result);
         }
     }
 
