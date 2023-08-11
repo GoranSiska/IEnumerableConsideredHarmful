@@ -10,8 +10,8 @@ namespace _05_OrderOfEvaluation
         public Context([CallerMemberName] string methodName = null)
         {
             _methodName = methodName.Substring(0, methodName.Length - 2);
-            Debug.WriteLine("<" + _methodName + ">");
-            Debug.Indent();
+            Trace.WriteLine("<" + _methodName + ">");
+            Trace.Indent();
         }
 
         public void Dispose()

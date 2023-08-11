@@ -6,9 +6,14 @@ namespace _02_MultipleEvaluation
 {
     public class ResponseCodeCheckService
     {
+        private ILog _log;
+        public ResponseCodeCheckService(ILog log)
+        {
+            _log = log;
+        }
         public bool CheckErrorsInResponseCodes(List<int> responseCodes)
         {
-            //var errorCodes = GetErrorCodes();
+            //var errorCodes = GetErrorCodes().ToList();
             return responseCodes
                 .All(responseCode => GetErrorCodes() //errorCodes
                     .All(errorCode => errorCode != responseCode));
@@ -16,6 +21,7 @@ namespace _02_MultipleEvaluation
 
         public virtual IEnumerable<int> GetErrorCodes()
         {
+            _log.Log("GetErrorCodes");
             SomeLongRunningOperation();
 
             yield return 401;
@@ -25,6 +31,7 @@ namespace _02_MultipleEvaluation
 
         public virtual void SomeLongRunningOperation()
         {
+            _log.Log("SomeLongRunningOperation");
             //simulating long running operation
             Thread.Sleep(500);
         }

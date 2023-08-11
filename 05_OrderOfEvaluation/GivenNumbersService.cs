@@ -15,13 +15,13 @@ namespace _05_OrderOfEvaluation
         public void OneTimeSetup()
         {
             traceListener = new TestTraceListener();
-            Debug.Listeners.Add(traceListener);
+            Trace.Listeners.Add(traceListener);
         }
 
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
-            Debug.Listeners.Remove(traceListener);
+            Trace.Listeners.Remove(traceListener);
         }
 
         [TearDown]
